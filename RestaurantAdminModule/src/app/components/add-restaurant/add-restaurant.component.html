@@ -1,0 +1,44 @@
+<div class="modal" [ngClass]="{'show-modal':isVisible}">
+    <div class="modal-content">
+        <h4>Add Restaurant</h4>
+        <form class="form" [formGroup]="addRestaurantForm" (ngSubmit)="onSubmit()" autocomplete="off">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input id="name" class="form-control" formControlName="name" type="text">
+                <span class="text-danger"
+                 *ngIf="(addRestaurantForm.get('name')?.dirty || addRestaurantForm.get('name')?.touched)  && addRestaurantForm.get('name')?.invalid">
+                  Name is required 
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" class="form-control" formControlName="description"></textarea>
+                <span class="text-danger"
+                 *ngIf="(addRestaurantForm.get('description')?.dirty || addRestaurantForm.get('description')?.touched )  && addRestaurantForm.get('description')?.invalid">
+                  Name is required and should be at least 10 characters long
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="Location">Location:</label>
+                <input id="Location" class="form-control" formControlName="location" type="text">
+                <span class="text-danger"
+                 *ngIf="(addRestaurantForm.get('location')?.touched || addRestaurantForm.get('location')?.dirty )  && addRestaurantForm.get('location')?.invalid">
+                 Location is required and should be at least 5 characters long.
+                </span>
+            </div>
+        
+            <div class="form-group">
+                <label for="cuisine">Cuisine:</label>
+                <input id="cuisine" class="form-control" formControlName="cuisine" type="text">
+                <span class="text-danger"
+                 *ngIf="(addRestaurantForm.get('cuisine')?.touched || addRestaurantForm.get('cuisine')?.dirty)  && addRestaurantForm.get('cuisine')?.invalid">
+                 Location is required and should be at least 5 characters long.
+                </span>
+            </div>
+          <div class="form-group mt-3">
+            <button type="submit" class="btn btn-primary me-2" [disabled]="addRestaurantForm.invalid">Add Restaurant</button>
+            <button class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+          </div>
+          </form>    
+    </div>
+</div>

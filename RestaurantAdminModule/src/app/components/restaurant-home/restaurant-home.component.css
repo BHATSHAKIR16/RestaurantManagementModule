@@ -1,0 +1,51 @@
+body{
+ container: beige;
+}
+
+.btn-img{
+    border:none;
+    border-radius: 50%;
+    background-color: beige;
+    display: block;
+}
+.btn-img :hover{
+
+}
+.add-restuarant button{
+    outline: none;
+    border:none;
+    border-radius: 50%;
+    background-color: beige;
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+}
+.add-restuarant button:hover{
+    scale: 1.1;
+}
+.restaurant{
+    box-shadow: 0px 2px 5px 1px #00000063;
+    padding: 15px;
+    gap: 3%;
+}
+.restuarant-config, .restaurant-info{
+    flex-grow: 2;
+}
+.restaurant-meta{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.restaurant-meta p{
+    margin: 0;
+}
+.res-image{
+object-fit: cover;
+width: 18%;
+}
+.delete-modal-content{
+    padding: 0px;
+}
+.delete-modal{
+    display: block;
+}

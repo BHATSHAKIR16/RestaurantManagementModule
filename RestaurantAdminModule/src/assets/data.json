@@ -1,0 +1,75 @@
+{
+  "restaurants": [
+    {
+      "id": "3",
+      "name": "Pizza Paradise",
+      "description": "Delicious pizzas with a variety of toppings.",
+      "location": "789 Oak St, Springfield",
+      "cuisine": "Italian",
+      "image": "assets/pizza.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Taco Town",
+      "description": "Authentic Mexican tacos and burritos.",
+      "location": "202 Pine St, Springfield",
+      "cuisine": "Mexican",
+      "image": "assets/biryani.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Curry House",
+      "description": "Aromatic and flavorful Indian cuisine.",
+      "location": "303 Cedar St, Springfield",
+      "cuisine": "Indian",
+      "image": "assets/chicken.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Dragon Palace",
+      "description": "Exquisite Chinese dishes with a modern flair.",
+      "location": "404 Birch St, Springfield",
+      "cuisine": "Chinese",
+      "image": "assets/biryani.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Vegan Delight",
+      "description": "Delicious and healthy vegan meals.",
+      "location": "505 Walnut St, Springfield",
+      "cuisine": "Vegan",
+      "image": "assets/chicken.jpg"
+    },
+    {
+      "name": "BBQ Barn",
+      "description": "Smoky and savory BBQ dishes.",
+      "location": "707 Cypress St, Springfieldsss",
+      "cuisine": "BBQ",
+      "id": "10"
+    },
+    {
+      "id": "10",
+      "name": "Taco Town",
+      "description": "Authentic Mexican tacos and burritos.",
+      "location": "202 Pine St, Springfield",
+      "cuisine": "Mexican",
+      "image": "assets/biryani.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Curry House",
+      "description": "Aromatic and flavorful Indian cuisine.",
+      "location": "303 Cedar St, Springfield",
+      "cuisine": "Indian",
+      "image": "assets/chicken.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Dragon Palace",
+      "description": "Exquisite Chinese dishes with a modern flair.",
+      "location": "404 Birch St, Springfield",
+      "cuisine": "Chinese",
+      "image": "assets/biryani.jpg"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<div style="margin-top: 100px;">
+    <div class="d-flex">
+        <h3>Manage Restaurant</h3>
+    </div>
+     <hr>
+     <div class="restaurants-holder">
+        <div class="restaurant d-flex mb-2" *ngFor="let restaurant of restaurantList">
+            <img [src]="restaurant.image" class="res-image" alt="restaurant-image">
+            <div class="restuarant-config d-flex">
+                <div class="restaurant-info">
+                    <h5>{{restaurant.name}}</h5>
+                    <p class="description">{{restaurant.description}}</p>
+                     <div class="restaurant-meta">
+                        <img src="../../../assets/location.png" width="20" height="20">
+                        <p>{{restaurant.location}}</p>
+                     </div>
+                     <div class="restaurant-meta mt-2">
+                        <img src="../../../assets/restaurant.png" alt="cuisine" width="20" height="20">
+                        <p>{{restaurant.cuisine}}</p>
+                     </div>
+                </div>
+                <div class="restaurant-controls">
+                    <button class="btn-img mt-3 mb-5" (click)="updateRestaurant(restaurant)"><img src="../../../assets/edit.png" width="20" alt="edit restaurant" title="edit restaurant"></button> 
+                    <button class="btn-img" (click)="openDeleteModal(restaurant.id)"><img src="../../../assets/remove-file_84086.png" width="20" alt="delete restaurant" title="delete restaurant"></button> 
+                </div>
+            </div>    
+        </div>
+     </div>
+     <div class="add-restuarant">
+        <button (click)="addRestaurant()"><img src="../../../assets/shop_12024257.png" width="70px" title="add Restaurant"></button>
+     </div>
+     <app-add-restaurant (updateRestaurants)="getRestaurantList()"></app-add-restaurant>
+     <app-update-restaurant (restaurantUpdated)="getRestaurantList()"></app-update-restaurant>
+     <ng-container *ngIf="showDeletePopup">
+        <div class="modal delete-modal">
+           <div class="modal-content delete-modal-content">
+             <div class="modal-heading">
+                <h4 class="text-center">Delete Restaurant</h4>
+             </div>
+            <p class="ms-2 mt-3">Do you want to delete this Restaurant?</p>
+                <div class="form-group text-center mt-4 mb-4">
+                    <button class="btn btn-primary me-2" (click)="deleteRestaurant()">Delete</button>
+                    <button class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+                </div>
+           </div>
+        </div>
+     </ng-container>
+</div>
